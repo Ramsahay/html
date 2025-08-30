@@ -4,19 +4,20 @@ Practical examples of calling APIs and using public functions. Replace placehold
 
 ## HTTP APIs
 
-### Health Check (example)
-Illustrative only. Implement the endpoint per `docs/getting-started.md` and then update this section with real behavior.
+### Health Check
+This endpoint is implemented in `index.php`.
 
 ```bash
 curl -s http://127.0.0.1:8000/api/health | jq .
 ```
 
-Expected example response:
+Example response:
 
 ```json
 {
   "status": "ok",
-  "uptimeSeconds": 12345
+  "phpVersion": "8.2.x",
+  "uptimeSeconds": 123456
 }
 ```
 

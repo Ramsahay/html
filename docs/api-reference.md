@@ -3,11 +3,39 @@
 Comprehensive reference for all public APIs, functions, classes, and components.
 
 ## Inventory
-- **HTTP APIs**: None detected
+- **HTTP APIs**: GET `/api/health`
 - **Functions/Classes**: None detected
 - **Components**: None detected
 
 If you add a public surface, document it using the templates below.
+
+## Endpoints
+
+### GET /api/health
+- **Description**: Returns basic service health information.
+- **Query Params**: None
+- **Auth**: Not required
+- **Responses**:
+  - 200:
+
+```json
+{
+  "status": "ok",
+  "phpVersion": "8.2.x",
+  "uptimeSeconds": 123456
+}
+```
+
+Notes:
+- `uptimeSeconds` is derived from the host OS uptime and may be omitted if unavailable.
+
+- 404: Returned for non-matching routes.
+
+**Examples**
+
+```bash
+curl -s http://127.0.0.1:8000/api/health | jq .
+```
 
 ## Templates
 

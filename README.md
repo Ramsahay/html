@@ -1,6 +1,6 @@
 ### Project Documentation
 
-This repository currently contains a minimal PHP entry point and no implemented public APIs, functions, or components yet. The documentation below provides structure, conventions, and examples to help you add and document new public surfaces.
+This repository contains a minimal PHP entry point with a public health check endpoint. The documentation below provides structure, conventions, and examples to help you add and document new public surfaces.
 
 ## Navigation
 - **Getting Started**: `docs/getting-started.md`
@@ -9,7 +9,7 @@ This repository currently contains a minimal PHP entry point and no implemented 
 - **Components**: `docs/components.md`
 
 ## Status
-- **Public APIs**: None detected
+- **Public APIs**: GET `/api/health`
 - **Functions/Classes**: None detected
 - **Components**: None detected
 

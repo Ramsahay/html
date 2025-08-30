@@ -6,7 +6,7 @@ This project is currently a minimal PHP codebase. Use this guide to set up your 
 - **PHP**: 8.0 or newer
 
 ## Repository Layout
-- `index.php`: Entry point. No public API is implemented yet.
+- `index.php`: Entry point. Implements GET `/api/health`.
 
 ## Running a Local Server (example)
 You can serve the repository root with PHP's built-in server:
@@ -18,7 +18,7 @@ php -S 127.0.0.1:8000 -t /workspace
 Note: This command assumes your working directory is the repository root. Adjust paths as needed for your environment.
 
 ## Create Your First Endpoint (example)
-Below is an example of how you might implement a simple JSON endpoint in `index.php`. This is illustrative only and not currently present in the repository.
+Below is an example of how you might implement a simple JSON endpoint in `index.php`. One endpoint (`/api/health`) already exists.
 
 ```php
 <?php
@@ -40,5 +40,11 @@ Test the example with:
 curl -i http://127.0.0.1:8000/
 ```
 
-When you add real endpoints or public functions, update `docs/api-reference.md` and `docs/usage-examples.md` accordingly.
+When you add endpoints or public functions, update `docs/api-reference.md` and `docs/usage-examples.md` accordingly.
+
+## Check Health Endpoint
+
+```bash
+curl -s http://127.0.0.1:8000/api/health | jq .
+```
 
